@@ -31,7 +31,7 @@ def getCredentials():
         else:
             print('Fetching New Tokens...')
             flow = InstalledAppFlow.from_client_secrets_file(
-                'client_secret_gia3.json',
+                'client_secret.json',       ## replace this client secret files with your file
                 scopes=[
                     'https://www.googleapis.com/auth/youtube.force-ssl'
                 ]
@@ -49,7 +49,7 @@ def getCredentials():
     return credentials  
             
 ############################################################################
-#9HUcGCIK-no
+
 
 #def main():
 def viewCounter():
@@ -71,7 +71,7 @@ def viewCounter():
         try:
             request = youtube[curr_api].videos().list(
                 part="snippet,statistics",
-                id="_VkAg7Tdb2s"      #6ckWDAb0JuQ
+                id="_VkAg7Tdb2s"    ## pass the video id
             )
             response = request.execute()
 
@@ -120,5 +120,3 @@ viewCounter()
 #     main()
 
 
-
-######################################### worked with brand account srishti tech2 ######################## forbidden error solved############
